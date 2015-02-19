@@ -1,3 +1,5 @@
+var cases = require('./cases.js');
+
 var nums = [1, -2, 99, 957, 2, 8, 3, 6, 2, 9, -1]
 
 function insertion_sort(arr) {
@@ -11,8 +13,8 @@ function insertion_sort(arr) {
 
 		arr[j + 1] = num;
 	}
+
+	return arr;
 }
 
-insertion_sort(nums)
-
-console.log(nums);
+cases.run(insertion_sort);
