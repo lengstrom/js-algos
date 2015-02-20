@@ -27,9 +27,9 @@ module.exports = new (function() {
 			var candidate = fn(deepCopy);
 			
 			if (this.check(deepCopy, this.cases[i].solution)) {
-				console.log('Case: `' + JSON.stringify(this.cases[i].set) + '` passed')
+				console.log('Case: `' + JSON.stringify(this.cases[i].set) + '` => passed')
 			} else {
-				console.warn('\nCase: `' + JSON.stringify(this.cases[i].set) + '` did not pass.');
+				console.warn('\nCase: `' + JSON.stringify(this.cases[i].set) + '` => did not pass.');
 				console.warn('Err: `' + JSON.stringify(candidate) + '`\n');
 			}
 		}
