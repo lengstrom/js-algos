@@ -1,4 +1,11 @@
+var cases = require('./cases.js');
+
 function merge_sort(A, p, r) {
+	if (arguments.length == 1) {
+		merge_sort(A, 0, A.length - 1)
+		return A;
+	}
+
 	if (p < r) {
 		var split = Math.floor((r + p)/2);
 		merge_sort(A, p, split);
@@ -20,7 +27,4 @@ function merge(A, p, q, r) {
 	}
 }
 
-var arr = [1, -2, 99, 957, 2, 8, 3, 6, 2, 9, -1];
-
-merge_sort(arr, 0, arr.length - 1)
-console.log(arr)
+cases.run(merge_sort);
