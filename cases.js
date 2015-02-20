@@ -23,9 +23,7 @@ module.exports = new (function() {
 				deepCopy[j] = this.cases[i].set[j];
 			}
 
-
 			var candidate = fn(deepCopy);
-			
 			if (this.check(deepCopy, this.cases[i].solution)) {
 				console.log('Case: `' + JSON.stringify(this.cases[i].set) + '` => passed')
 			} else {
